@@ -1,0 +1,1 @@
+﻿C:\Users\SAM-Tech\Desktop\it\Project4.vcxproj(170,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\kms\packages\AllegroDeps.1.13.0\build\native\AllegroDeps.targets.

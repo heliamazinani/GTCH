@@ -1,0 +1,216 @@
+cmake_minimum_required(VERSION 3.21)
+project(it)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(packages)
+include_directories(packages/Allegro.5.2.8)
+include_directories(packages/Allegro.5.2.8/build)
+include_directories(packages/Allegro.5.2.8/build/native)
+include_directories(packages/Allegro.5.2.8/build/native/include)
+include_directories(packages/Allegro.5.2.8/build/native/include/allegro5)
+include_directories(packages/Allegro.5.2.8/build/native/include/allegro5/inline)
+include_directories(packages/Allegro.5.2.8/build/native/include/allegro5/internal)
+include_directories(packages/Allegro.5.2.8/build/native/include/allegro5/opengl)
+include_directories(packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext)
+include_directories(packages/Allegro.5.2.8/build/native/include/allegro5/platform)
+include_directories(packages/AllegroDeps.1.13.0)
+include_directories(packages/AllegroDeps.1.13.0/build)
+include_directories(packages/AllegroDeps.1.13.0/build/native)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/FLAC)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/freetype2)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/config)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/libpng16)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/ogg)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/opus)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/theora)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/vorbis)
+include_directories(packages/AllegroDeps.1.13.0/build/native/include/webp)
+
+add_executable(it
+        packages/Allegro.5.2.8/build/native/include/allegro5/inline/fmaths.inl
+        packages/Allegro.5.2.8/build/native/include/allegro5/internal/alconfig.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/gl_ext_alias.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/gl_ext_api.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/gl_ext_defs.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/gl_ext_list.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/glx_ext_alias.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/glx_ext_api.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/glx_ext_defs.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/glx_ext_list.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/wgl_ext_alias.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/wgl_ext_api.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/wgl_ext_defs.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/GLext/wgl_ext_list.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/opengl/gl_ext.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alandroid.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alandroidcfg.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/albcc32.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/aliphone.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/aliphonecfg.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/allegro_sdl_config.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/almngw32.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/almsvc.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alosx.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alosxcfg.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alplatf.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alraspberrypi.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alraspberrypicfg.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alucfg.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alunix.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alwatcom.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/alwin.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/astdbool.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/platform/astdint.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/alcompat.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro5.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_acodec.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_audio.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_color.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_direct3d.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_font.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_image.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_memfile.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_native_dialog.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_opengl.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_physfs.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_primitives.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_ttf.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_video.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/allegro_windows.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/altime.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/base.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/bitmap.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/bitmap_draw.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/bitmap_io.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/bitmap_lock.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/blender.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/clipboard.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/color.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/config.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/cpu.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/debug.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/display.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/drawing.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/error.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/events.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/file.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/fixed.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/fmaths.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/fshook.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/fullscreen_mode.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/haptic.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/joystick.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/keyboard.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/keycodes.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/memory.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/monitor.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/mouse.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/mouse_cursor.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/path.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/render_state.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/shader.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/system.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/threads.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/timer.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/tls.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/touch_input.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/transformations.h
+        packages/Allegro.5.2.8/build/native/include/allegro5/utf8.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/all.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/assert.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/callback.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/export.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/format.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/metadata.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/ordinals.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/stream_decoder.h
+        packages/AllegroDeps.1.13.0/build/native/include/FLAC/stream_encoder.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/config/ftconfig.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/config/ftheader.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/config/ftmodule.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/config/ftoption.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/config/ftstdlib.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/freetype.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftadvanc.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftbbox.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftbdf.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftbitmap.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftbzip2.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftcache.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftchapters.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftcid.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftdriver.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/fterrdef.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/fterrors.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftfntfmt.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftgasp.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftglyph.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftgxval.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftgzip.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftimage.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftincrem.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftlcdfil.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftlist.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftlzw.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftmac.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftmm.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftmodapi.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftmoderr.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftotval.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftoutln.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftparams.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftpfr.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftrender.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftsizes.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftsnames.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftstroke.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftsynth.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftsystem.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/fttrigon.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/fttypes.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ftwinfnt.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/t1tables.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/ttnameid.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/tttables.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/freetype/tttags.h
+        packages/AllegroDeps.1.13.0/build/native/include/freetype2/ft2build.h
+        packages/AllegroDeps.1.13.0/build/native/include/libpng16/png.h
+        packages/AllegroDeps.1.13.0/build/native/include/libpng16/pngconf.h
+        packages/AllegroDeps.1.13.0/build/native/include/libpng16/pnglibconf.h
+        packages/AllegroDeps.1.13.0/build/native/include/ogg/ogg.h
+        packages/AllegroDeps.1.13.0/build/native/include/ogg/os_types.h
+        packages/AllegroDeps.1.13.0/build/native/include/opus/opus.h
+        packages/AllegroDeps.1.13.0/build/native/include/opus/opus_defines.h
+        packages/AllegroDeps.1.13.0/build/native/include/opus/opus_multistream.h
+        packages/AllegroDeps.1.13.0/build/native/include/opus/opus_types.h
+        packages/AllegroDeps.1.13.0/build/native/include/opus/opusfile.h
+        packages/AllegroDeps.1.13.0/build/native/include/theora/codec.h
+        packages/AllegroDeps.1.13.0/build/native/include/theora/theora.h
+        packages/AllegroDeps.1.13.0/build/native/include/theora/theoradec.h
+        packages/AllegroDeps.1.13.0/build/native/include/vorbis/codec.h
+        packages/AllegroDeps.1.13.0/build/native/include/vorbis/vorbisenc.h
+        packages/AllegroDeps.1.13.0/build/native/include/vorbis/vorbisfile.h
+        packages/AllegroDeps.1.13.0/build/native/include/webp/decode.h
+        packages/AllegroDeps.1.13.0/build/native/include/webp/demux.h
+        packages/AllegroDeps.1.13.0/build/native/include/webp/encode.h
+        packages/AllegroDeps.1.13.0/build/native/include/webp/mux_types.h
+        packages/AllegroDeps.1.13.0/build/native/include/webp/types.h
+        packages/AllegroDeps.1.13.0/build/native/include/dumb.h
+        packages/AllegroDeps.1.13.0/build/native/include/jconfig.h
+        packages/AllegroDeps.1.13.0/build/native/include/jerror.h
+        packages/AllegroDeps.1.13.0/build/native/include/jmorecfg.h
+        packages/AllegroDeps.1.13.0/build/native/include/jpeglib.h
+        packages/AllegroDeps.1.13.0/build/native/include/minimp3.h
+        packages/AllegroDeps.1.13.0/build/native/include/minimp3_ex.h
+        packages/AllegroDeps.1.13.0/build/native/include/physfs.h
+        packages/AllegroDeps.1.13.0/build/native/include/png.h
+        packages/AllegroDeps.1.13.0/build/native/include/pngconf.h
+        packages/AllegroDeps.1.13.0/build/native/include/pnglibconf.h
+        packages/AllegroDeps.1.13.0/build/native/include/zconf.h
+        packages/AllegroDeps.1.13.0/build/native/include/zlib.h
+        Source.cpp
+        Source2.cpp)
